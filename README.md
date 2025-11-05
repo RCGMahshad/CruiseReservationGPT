@@ -1,2 +1,2 @@
-# cruise-ai-marketplace
+# cruiseReservationGPT
 AI-powered onboard marketplace for cruise lines
