@@ -23,15 +23,18 @@ try:
     driver = setup_driver()
     
     # Set implicit wait time
-    driver.implicitly_wait(10)
+    driver.implicitly_wait(100)
     
     # Navigate to Royal Caribbean website
     print("Navigating to Royal Caribbean website...")
-    driver.get("https://www.royalcaribbean.com")
+    driver.get("https://www.royalcaribbean.com/cruises?search=ship:IC&country=USA&icid=yrfcns_tctclp_cs:_hm_hero_4146")
     
     # Wait for the page to load (wait for the logo or a main element)
-    wait = WebDriverWait(driver, 10)
+    wait = WebDriverWait(driver, 100)
     wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "header")))
+
+    link = driver.find_element(By.LINK_TEXT, "BOOK NOW")
+    link.click()
     
     print(f"Successfully loaded: {driver.title}")
 
