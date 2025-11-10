@@ -1,0 +1,24 @@
+# Requirements for Vector Database Creator
+
+# Core data processing
+pandas>=1.5.0
+numpy>=1.21.0
+scikit-learn>=1.0.0
+
+# Vector database and embeddings
+chromadb>=0.4.0
+sentence-transformers>=2.2.0
+
+# Text processing and chunking
+langchain-core>=0.1.0
+langchain-text-splitters>=0.0.1
+langchain-community>=0.0.10
+
+# Additional utilities
+python-dotenv>=1.0.0
+tqdm>=4.65.0
+
+# Optional: For better performance
+# torch>=2.0.0  # Uncomment if you want to use GPU acceleration
+# faiss-cpu>=1.7.4  # Alternative vector database (CPU version)
+# faiss-gpu>=1.7.4  # Alternative vector database (GPU version)
