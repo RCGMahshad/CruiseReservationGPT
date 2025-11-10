@@ -5,7 +5,7 @@ from pathlib import Path
 def main():
     
     ship_desc_path = Path("data/ship_descriptions")
-    itinerary_path = Path("data/itineraries")
+    #itinerary_path = Path("data")
     
     # Configuration
     db_path = "./example_vector_db"
@@ -46,15 +46,14 @@ def main():
             f.write("Sample cruise ship with luxury amenities and dining options.")
         vdb.process_file(str(sample_file))
     
-    '''
+    
     # Step 3: Process the CSV file (optional)
-    print("\n3. Processing CSV file...")
-    vdb.process_file(
-        str(itinerary_path / "cruise_destinations.csv"),
-        csv_text_columns=['description', 'activities'],
-        csv_combine_columns=True
-    )
-    '''
+    # print("\n3. Processing CSV file...")
+    # vdb.process_file(
+    #     str(itinerary_path / "cruise_itineraries.csv"),
+    #     csv_text_columns=['description', 'activities'],
+    #     csv_combine_columns=True
+    # )
     
     # Step 4: Show database information
     print("\n3. Database Information:")
